@@ -5,7 +5,7 @@ jest.mock('../product/product_client');
 describe('service',()=>{
     let productService;
     beforeEach(()=>{
-        productService = new ProductService();
+        productService = new ProductService(new ProductClient());
     })
 
     const fetchItems = jest.fn(async ()=>[
